@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(190deg, #000000, #333333);
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 100px;
+}
+p {
+    font-size: 30px;
+}
+table {
+    width: -10%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    font-size: "Poppins", sans-serif;
+}
+th, td {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+th:nth-child(even) {
+    background-color: #333333;
+}
+tr:hover {
+    background-color: #dceeff;
+    transition: 0.2s;
+}
+table {
+    border-radius: 50px;
+    overflow: hidden;
+}
+td {
+    color: white;
+    background-color: #2F2F2F;
+}
+.mueble-icon {
+    width: 100%;
+}
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}.boton {
+    width: 150px;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    color: black;
+    background-color: #CCCCCC;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px;
+    box-shadow: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: scale(1.1); 
+    display: flex;
+    text-decoration: none;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.botones {
+    display: flex;
+    gap: 1px;
+    margin-top: 300px;
+}

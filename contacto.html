@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      height: 150%;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    .contenedor-principal {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fondo-gradiente {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(190deg, #000000, #333333);
+      z-index: 0;
+    }
+
+    .circulo-flotante {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      animation: flotar 25s infinite ease-in-out;
+    }
+
+    .circulo1 {
+      width: 400px;
+      height: 400px;
+      top: -200px;
+      left: -200px;
+      animation-delay: 0s;
+    }
+
+    .circulo2 {
+      width: 300px;
+      height: 300px;
+      bottom: -150px;
+      right: -150px;
+      animation-delay: 8s;
+    }
+
+    .circulo3 {
+      width: 250px;
+      height: 250px;
+      top: 40%;
+      right: 5%;
+      animation-delay: 15s;
+    }
+
+    @keyframes flotar {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(40px, -40px) scale(1.15);
+      }
+      66% {
+        transform: translate(-30px, 30px) scale(0.85);
+      }
+    }
+
+    .tarjeta-contacto {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      padding: 70px 90px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+      max-width: 550px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .tarjeta-contacto:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+    }
+
+    .contenedor-icono {
+      display: inline-flex;
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 22px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 35px;
+      box-shadow: 0 12px 35px rgba(102, 126, 234, 0.45);
+      transition: transform 0.3s ease;
+    }
+
+    .contenedor-icono:hover {
+      transform: scale(1.05);
+    }
+
+    .icono-email {
+      width: 45px;
+      height: 45px;
+    }
+
+    .titulo {
+      margin: 0 0 15px 0;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .descripcion {
+      margin: 0 0 45px 0;
+      font-size: 17px;
+      color: #64748b;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .separador {
+      width: 70px;
+      height: 5px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      margin: 35px auto;
+      border-radius: 3px;
+    }
+
+    .seccion-correo {
+      margin: 45px 0;
+    }
+
+    .etiqueta {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #94a3b8;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .boton-email {
+      display: inline-block;
+      font-size: 22px;
+      color: #1e293b;
+      text-decoration: none;
+      padding: 18px 38px;
+      background: #f1f5f9;
+      border-radius: 14px;
+      transition: all 0.4s ease;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .boton-email::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.15), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .boton-email:hover::before {
+      left: 100%;
+    }
+
+    .boton-email:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    .boton-email:focus {
+      outline: 3px solid #667eea;
+      outline-offset: 3px;
+    }
+
+    .pie-texto {
+      margin-top: 45px;
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+      .tarjeta-contacto {
+        padding: 50px 35px;
+      }
+      
+      .titulo {
+        font-size: 32px;
+      }
+      
+      .descripcion {
+        font-size: 15px;
+      }
+      
+      .boton-email {
+        font-size: 18px;
+        padding: 16px 28px;
+      }
+    }
+    .boton {
+    width: 150px;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    color: black;
+    background-color: #CCCCCC;
+    padding: 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px;
+    box-shadow: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    transform: scale(1.1); 
+    display: flex;
+    text-decoration: none;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.botones {
+    display: flex;
+    gap: 1px;
+    margin-top: -90px;
+}
+</style>
+<style>@view-transition { navigation: auto; }</style>
+</head>
+<body>
+  <main class="contenedor-principal">
+   <div class="fondo-gradiente">
+    <div class="circulo-flotante circulo1"></div>
+    <div class="circulo-flotante circulo2"></div>
+    <div class="circulo-flotante circulo3"></div>
+   </div>
+   <section class="tarjeta-contacto">
+    <div class="contenedor-icono">
+     <svg class="icono-email" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="white" />
+     </svg>
+    </div>
+    <h1 class="titulo">Si gustas de mis servicios Contáctame</h1>
+    <p class="descripcion">contactame</p>
+    <div class="separador"></div>
+    <div class="seccion-correo"><label for="email-link" class="etiqueta">Whatsap</label> <a href="https://web.whatsapp.com/?view=cm&amp;fs=1&amp;to=+52 222 198 4086" id="email-link" class="boton-email" target="_blank" rel="noopener noreferrer"href="https://web.whatsapp.com/?view=cm&amp;fs=1&amp;to=+52 222 198 4086" id="email-link" class="boton-email" target="_blank" rel="noopener noreferrer">+52 222 198 4086</a>
+    </div>
+    <div class="seccion-correo"><label for="email-link" class="etiqueta"></label> <a a href="https://web.whatsapp.com/?view=cm&amp;fs=1&amp;to=+52 222 198 4086" id="email-link" class="boton-email" target="_blank" rel="noopener noreferrer"href="https://web.whatsapp.com/?view=cm&amp;fs=1&amp;to=+52 56 3185 0562" id="email-link" class="boton-email" target="_blank" rel="noopener noreferrer">+52 56 3185 0562</a>
+    <p class="pie-texto">Numero de referencia</p>
+   </section>
+  </main>
+  <div class="botones">
+    <a href="servicio.html" class="boton">Pagina Anterior 👈</a>
+    </div>
+</html>
